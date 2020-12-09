@@ -26,7 +26,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title">Каталог продукции</h1>
+      <h1 class="page-main__title-catalog">Каталог продукции</h1>
       <section class="products">
         <div class="products__wrapper">
           <h2 class="visually-hidden"> Основные товары </h2>
@@ -34,21 +34,21 @@
             <li class="products__item">
               <div class="products__desc">
                 <a class="products__link"><img class="products__img" src="https://via.placeholder.com/84x100" alt="Cat Energy PRO 500 г"></a>
-                <table class="products__info">
-                  <th class="products__title"> <a class="products__link">Cat Energy PRO 500 г</a></th>
-                  <tr>
-                    <td class="products__text products__text--left">Масса</td>
-                    <td class="products__text products__text--right">500 г</td>
-                  </tr>
-                  <tr>
-                    <td class="products__text products__text--left">Вкус</td>
-                    <td class="products__text products__text--right">Курица</td>
-                  </tr>
-                  <tr>
-                    <td class="products__text products__text--left">Цена</td>
-                    <td class="products__text products__text--right">700 Р.</td>
-                  </tr>
-                </table>
+                  <table class="products__info">
+                    <th class="products__title"> <a class="products__link">Cat Energy PRO 500 г</a></th>
+                    <tr>
+                      <td class="products__text products__text--left">Масса</td>
+                      <td class="products__text products__text--right">500 г</td>
+                    </tr>
+                    <tr>
+                      <td class="products__text products__text--left">Вкус</td>
+                      <td class="products__text products__text--right">Курица</td>
+                    </tr>
+                    <tr>
+                      <td class="products__text products__text--left">Цена</td>
+                      <td class="products__text products__text--right">700 Р.</td>
+                    </tr>
+                  </table>
               </div>
               <div class="products__button products__button--green"><a href="#" class="products__buy-btn">Заказать</a></div>
             </li>
@@ -178,7 +178,7 @@
                 </div>
                 <div class="products__button products__button--green"><a href="#" class="products__buy-btn">Заказать</a></div>
               </li>
-              <li class="products__item">
+              <li class="products__item products__show-more">
                 <a href="#" class="products__showbtn"><img src="https://via.placeholder.com/30x30"></a>
                 <table class="products__info">
                   <th class="products__title">Показать еще 100500 товаров</th>
@@ -186,7 +186,7 @@
                     <td class="products__text">На самом деле вкусов гораздо больше!</td>
                   </tr>
                 </table>
-                <div class="products__button products__button--grey"><a href="#" class="products__link">Показать все</a></div>
+                <div class="products__button products__title products__button--grey"><a href="#" class="products__link">Показать все</a></div>
               </li>
             </ul>
           </div>
@@ -250,7 +250,7 @@
           <address class="contacts__address">ул. Большая
             Конюшенная, д. 19/8
             Санкт-Петербург</address>
-            <div class="contacts__map"></div>
+          <div class="contacts__map"><img src="img/map_pin.png" alt="map_pin"></div>
         </div>
       </section>
       <footer class="page-footer">
