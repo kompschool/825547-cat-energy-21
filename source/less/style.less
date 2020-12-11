@@ -1,3 +1,4 @@
+// Начните писать стили здесь
 @import "contacts";
 @import "copyright";
 @import "description";
@@ -10,6 +11,9 @@
 @import "promo";
 @import "slider";
 @import "social";
+@import "questions";
+@import "products";
+@import "subproducts";
 
 @basic_green:#68B738;
 @basic_grey:#F2F2F2;
@@ -17,7 +21,7 @@
 @special_grey:#CDCDCD;
 @special_grey-3:#666666;
 @special_dark_grey:#444444;
-@special_dark_grey:#222222;
+@special_dark_grey2:#222222;
 @status_error:#FF8282;
 @basic_green-2:#5EAA2F;
 @black_black:#111111;
@@ -26,7 +30,7 @@
 
 @font-face {
   font-family: "Oswald";
-  src: url('../fonts/oswaldregular.woff');
+  src: url("../fonts/oswaldregular.woff");
 }
 
 .visually-hidden {
@@ -36,14 +40,16 @@
   height: 1px;
   margin: -1px;
 }
+
 .page__body {
   padding: 0 20px;
 }
+
 .copyright__text {
-font-family: Arial;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 18px;
-color: @special_dark_grey;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: @special_dark_grey;
 }
