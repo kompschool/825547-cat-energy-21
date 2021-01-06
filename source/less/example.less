@@ -3,6 +3,28 @@
   background-color: #eaeaea;
 }
 
+.example__wrapper-text {
+  width: 668px;
+  margin: 0;
+  padding: 0;
+}
+
+.example__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.example__item {
+  width: 124px;
+  height: 56px;
+  border: 1px solid @special_grey;
+  border-radius: 3px;
+  position: relative;
+}
+
 .example__title,
 .example__text,
 .example__subject,
@@ -36,19 +58,239 @@
   line-height: 18px;
 }
 
-.example__subject {
-  font-size: 24px;
-  line-height: 24px;
-}
-
 .example__des {
   font-size: 12px;
   line-height: 12px;
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  width: 70px;
   text-align: center;
+  background-color: #eaeaea;
+}
+
+.example__subject {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 12px auto;
 }
 
 .example__summa {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  margin: 40px auto;
+}
+
+.example__toggle {
+  position: relative;
+  text-align: center;
+}
+
+.slider__toggle {
+  width: 84px;
+}
+
+.slider__toggle::before,
+.slider__toggle::after {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  position: absolute;
+}
+
+.slider__toggle::before {
+  content: "Было";
+  left: 40px;
+}
+
+.slider__toggle::after {
+  content: "Стало";
+  left: 200px;
+}
+
+.example__sliderlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    padding: 0;
+    background-color: @white;
+    border-top: 1px solid @special_grey-2;
+  }
+
+  .example__wrapper {
+    display: grid;
+  }
+
+  .example__title {
+    padding: 0 30px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 2;
+  }
+
+  .example__text {
+    padding: 0 30px;
+    font-size: 16px;
+    line-height: 24px;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 3;
+    grid-row-end: 3;
+  }
+
+  .example__list {
+    width: 360px;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-column-end: 2;
+    grid-row-end: 4;
+    padding: 0 30px;
+  }
+
+  .example__des {
+    background-color: @white;
+  }
+
+  .example__summa {
+    font-size: 20px;
+    line-height: 20px;
+    width: 174px;
+    text-align: right;
+    margin: 20px auto 200px;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-column-end: 3;
+    grid-row-end: 4;
+  }
+
+  .slider {
+    background-color: @special_grey-2;
+    height: 465px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    position: relative;
+  }
+
+  .example__slider-block {
+    height: 200px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .example__slideritem-img {
+    height: 510px;
+    position: absolute;
+    left: 110px;
+    top: -120px;
+  }
+
+  .slider__toggle {
+    width: 428px;
+    margin-top: 200px;
+  }
+
+  .slider__toggle::before,
+  .slider__toggle::after {
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    line-height: 29px;
+    text-transform: uppercase;
+    position: absolute;
+  }
+
+  .slider__toggle::before {
+    content: "Было";
+    left: 110px;
+  }
+
+  .slider__toggle::after {
+    content: "Стало";
+    left: 610px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    border-top: 0;
+    background-color: none;
+  }
+
+  .example__wrapper {
+    grid-template-columns: 600px auto;
+    background-color: @special_grey-2;
+  }
+
+  .example__wrapper-text {
+    background-color: @special_grey-2;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 2;
+    grid-row-end: 3;
+  }
+
+  .example__title {
+    margin: 0;
+    padding: 30px 30px 60px 110px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 3;
+    grid-row-end: 2;
+    background-color: @white;
+  }
+
+  .example__text {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 2;
+    grid-row-end: 3;
+    background-color: @special_grey-2;
+    margin: 0;
+    padding: 60px 30px 30px 110px;
+    width: 560px;
+  }
+
+  .example__list {
+    margin: 0;
+    padding: 40px 0 30px 110px;
+    background-color: @special_grey-2;
+    width: 400px;
+  }
+
+  .example__summa {
+    width: 350px;
+    text-align: left;
+    margin: 40px 0 120px 110px;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    grid-column-end: 2;
+    grid-row-end: 5;
+  }
+
+  .slider {
+    background-color: @special_grey-2;
+    height: 465px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 6;
+  }
+
+  .example__des {
+    background-color: @special_grey-2;
+  }
 }

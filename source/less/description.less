@@ -1,5 +1,5 @@
 .description {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .description__title {
@@ -19,4 +19,106 @@
   font-size: 14px;
   line-height: 18px;
   color: @special_dark_grey;
+}
+
+.description__item {
+  display: grid;
+  grid-template-columns: 80px auto;
+  align-items: center;
+}
+
+.description__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+}
+
+.description__item::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/desc_item-eat.png");
+}
+
+@media (min-width: @tablet-width) {
+  .description {
+    padding: 0 30px;
+  }
+
+  .description__title {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .description__text {
+    font-size: 16px;
+    line-height: 24px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
+
+  .description__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .description__item {
+    width: 246px;
+    grid-template-columns: 80px auto;
+    grid-template-rows: 140px 140px;
+    margin: 20px 0;
+  }
+
+  .description__item--eat::after,
+  .description__item--water::after,
+  .description__item--change::after,
+  .description__item--time::after {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 280px;
+    line-height: 280px;
+    color: @basic_grey;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    justify-self: end;
+    align-self: start;
+    z-index: -2;
+  }
+
+  .description__item--eat::after {
+    content: "1";
+  }
+
+  .description__item--water::after {
+    content: "2";
+  }
+
+  .description__item--change::after {
+    content: "3";
+  }
+
+  .description__item--time::after {
+    content: "4";
+  }
+
+  .description__item::before {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description__wrapper {
+    width: 1220px;
+    margin: 0 auto;
+  }
 }

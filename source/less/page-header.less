@@ -1,8 +1,47 @@
 .page-header {
-  background-color: @basic_green;
-  background-image: url("../img/index-background-desktop2.png");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 65px;
+
+  @media (min-width: @tablet-width) {
+    height: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 150px;
+  }
+}
+
+.page-header__wrapper {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    padding-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding-top: 70px;
+  }
+}
+
+.page-header__logo-wrapper {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202;
+  }
 }

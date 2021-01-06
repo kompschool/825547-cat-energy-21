@@ -1,5 +1,14 @@
 .page-main {
-  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .page-main__title-catalog {
